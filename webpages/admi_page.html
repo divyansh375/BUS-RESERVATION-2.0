@@ -1,0 +1,130 @@
+<html>
+<head>
+
+<link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+
+$("#bus").fadeOut();
+$("#t2").fadeOut();
+
+$("#b1").click(function()
+{
+$("#bihar1").fadeOut();
+$("#t1").fadeOut();
+$("#bus").fadeIn();
+$("#t2").fadeIn();
+
+});
+
+$("#b2").click(function()
+{
+$("#bihar1").fadeIn();
+$("#t1").fadeIn();
+$("#bus").fadeOut();
+$("#t2").fadeOut();
+
+});
+
+
+});
+
+
+</script>
+
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+opacity:6;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li a:active{
+ 	background-color:green;
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="Logo.jpg" title="logo" alt="img" height="100px">
+<br>
+<div id="b1" style="background-color:blue; position:absolute; width:20px;opacity:.4;right:10px;top:350px">
+<p style="color:white">></p>
+</div>
+
+<div id="b2" style="background-color:blue; position:absolute; width:20px;opacity:.4;left:10px;top:350px">
+<p style="color:white"><</p>
+</div>
+
+<img src="bihar1.jpg" title="bihar" alt="img" height="600px" width="1330px" id="bihar1">
+<br>
+
+
+<img src="bus.jpg" title="bihar" alt="img" height="600px" width="1330px" id="bus" >
+<br>
+
+<div style="background-color:blue; position:absolute; top:650px ;opacity:.5" id="t1">
+<p style="color:white"><i>experience the best places in Bihar </i></p>
+</div>
+
+<div style="background-color:blue; position:absolute; top:650px ;" id="t2" >
+<p style="color:white"><i>We have the best busses </i></p>
+</div>
+
+
+
+<ul>
+<li><a href="homepage.html" >Home</a></li>
+<li><a href="Myticket.html">My Tickets</a></li>
+<li><a href="enquiry.html">Enquiry</a></li>
+<li><a href="terms.html">Terms and Policies</a></li>
+<li><a href="about.html">About </a></li>
+</ul>
+
+<form method="GET" action="/pro_get10">
+<button class = "btn waves-effect waves-light red" type = "submit">View messages</button>
+</form>
+
+
+ <div class = "footer-copyright">
+ <div class = "container">
+   © 2016 Copyright Information
+   <a class = "grey-text text-lighten-4 right" href = "#!">Links</a>
+    </div>
+   </div>    
+
+
+</body>
+</html>

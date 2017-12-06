@@ -1,0 +1,254 @@
+<html>
+<head>
+
+<link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>      
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+
+$("#bus").fadeOut();
+$("#t2").fadeOut();
+
+$("#b1").click(function()
+{
+$("#bihar1").fadeOut();
+$("#t1").fadeOut();
+$("#bus").fadeIn();
+$("#t2").fadeIn();
+
+});
+
+$("#b2").click(function()
+{
+$("#bihar1").fadeIn();
+$("#t1").fadeIn();
+$("#bus").fadeOut();
+$("#t2").fadeOut();
+
+});
+
+
+});
+
+
+</script>
+
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+opacity:6;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li a:active{
+ 	background-color:green;
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="Logo.jpg" title="logo" alt="img" height="100px">
+<br>
+<div id="b1" style="background-color:blue; position:absolute; width:20px;opacity:.4;right:10px;top:350px">
+<p style="color:white">></p>
+</div>
+
+<div id="b2" style="background-color:blue; position:absolute; width:20px;opacity:.4;left:10px;top:350px">
+<p style="color:white"><</p>
+</div>
+
+<img src="bihar1.jpg" title="bihar" alt="img" height="600px" width="1330px" id="bihar1">
+<br>
+
+
+<img src="bus.jpg" title="bihar" alt="img" height="600px" width="1330px" id="bus" >
+<br>
+
+<div style="background-color:blue; position:absolute; top:650px ;opacity:.5" id="t1">
+<p style="color:white"><i>experience the best places in Bihar </i></p>
+</div>
+
+<div style="background-color:blue; position:absolute; top:650px ;" id="t2" >
+<p style="color:white"><i>We have the best busses </i></p>
+</div>
+
+
+
+<ul>
+<li><a href="homepage.html" >Home</a></li>
+<li><a href="Myticket.html">My Tickets</a></li>
+<li><a href="enquiry.html">Enquiry</a></li>
+<li><a href="terms.html">Terms and Policies</a></li>
+<li><a href="about.html">About </a></li>
+</ul>
+
+
+
+<script>
+function check()
+{
+var un=document.main.username.value;
+var pass=document.main.password.value;
+var f_name=document.main.first.value;
+var s_name=document.main.second.value;
+var t_name=document.main.third.value;
+var date=document.main.dob.value;
+var c=document.main.city.value;
+var mo=document.main.mobile.value;
+var add=document.main.address.value;
+var gen=document.main.male.value;
+if(un==null || un=="" )
+{
+alert("please fill username");
+return(false);
+}
+else if(pass.length<6 || pass=="" || pass==null)
+{
+alert("please enter a strong password of minimum 6 characters");
+}
+if(f_name==null || f_name=="" )
+{
+alert("please fill first name");
+return(false);
+}
+if(t_name==null || t_name=="" )
+{
+alert("please fill sirname");
+return(false);
+}
+if(date==null || date=="" )
+{
+alert("please fill dob");
+return(false);
+}
+if(c==null || c=="" )
+{
+alert("please fill native city");
+return(false);
+}
+if(mo.NaN || mo=="" || mo==null || mo.length!=10)
+{
+alert("please enter a valid mobile number which has 10 digits ");
+return(false);
+}
+if(add=="" || add==null)
+{
+alert("please enter your native address");
+return(false);
+}
+alert("The data you entered is :\n\nusername:\t"+un+"\nname:\t"+f_name+" " +s_name+" "
++t_name+"\ngender:\t"+gen+"\nDOB:\t"+date+"\nnative city:\t"+c+"\nMobile
+Number:\t"+mo+"\nNative Address:\t"+add+"\n\n Thank you for filling the Form");
+}
+</script>
+</head>
+<body>
+
+<div class="z-depth-2">
+<form name="main" onsubmit="return check()" action="http://localhost:8081/get_pro" method="get">
+username<br>
+
+
+
+<input type="text" name="username" />
+
+<br>
+<div class="input-field">
+<br>password<br>
+
+<input type="password" name="password"/>
+</div>
+<br>Name:<br>
+First<input type="text" name="first"/> Middle<input type="text" name="second"/> Last <input
+type="text" name="third"/>
+<br>Gender<br>
+
+<br>DOB<br>
+<input type="date" name="dob" />
+<br>Country<br>
+<input type="text" name="country"/>
+<br>Native City</br>
+<input type="text" name="city"/>
+<br>Proof of DOB</br>
+<input type="file" name="proof" accept="img/*"/>
+<br>Mobile Number</br>
+<input type="text" name="mobile"/>
+<br>Native Address</br>
+<textarea name="address"></textarea>
+<br>
+
+
+
+
+
+   <div class = "row">
+               <div class = "input-field col s12">
+                   <p>
+                     <input id = "male" type = "radio" name = "male"
+                        value = "male" checked />
+                     <label for = "male">Male</label>
+                  </p>
+                  
+                  <p>
+                     <input id = "female" type = "radio" name = "male"
+                        value = "female" checked />
+                     <label for = "female">Female</label>
+                  </p>
+                  
+                 
+               </div>
+            </div>  
+
+
+
+
+<button class = "btn waves-effect waves-light red" type = "submit">Submit</button><br><br>
+
+<button class = "btn waves-effect waves-light red" type = "reset">Reset</button>
+</form>
+
+
+</div>
+
+ <div class = "footer-copyright">
+ <div class = "container">
+   © 2016 Copyright Information
+   <a class = "grey-text text-lighten-4 right" href = "#!">Links</a>
+    </div>
+   </div>    
+
+
+</body>
+</html>
+
